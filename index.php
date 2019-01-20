@@ -1,0 +1,39 @@
+<?php
+  include_once 'links.php';
+  include_once 'header.php'; // inlcude_once will ensure the file will only be included once if it is included in one of the linked files as well.
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Home</title>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="container-fluid">
+        
+        <h2>Projects</h2>
+        <dl>
+          <dt><a href="basicCalc.php">Basic Calculator</a></dt>
+          <dt><a href="basicDatabaseQuery.php">Basic Database Query</a></dt>
+          <dt>Prepared Statements</dt>
+          <dd>- <a href="prepStatQuery.php">Query</a></dd>
+          <dd>- <a href="prepStatInsert.php">Insert</a></dd>
+        </dl>
+        
+        <div>
+          <?php
+            echo "Today is ".date("l")."</br>"; // date(l) will return the current day as a string
+            echo "<p>hi there</p>";
+          ?>
+        </div>
+        
+      </div> <!-- end container-fluid -->
+    </div> <!-- end main-container -->
+    
+    
+  </body>
+</html>
