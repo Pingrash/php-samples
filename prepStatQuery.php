@@ -18,7 +18,7 @@
       Prepared statement result:</br>
       <?php
         $data = "Admin";
-        // Created a template
+        // Created a data template
         $sql = "SELECT * FROM users WHERE user_uid=?;";
         // Create a prepared statement
         $stmt = mysqli_stmt_init($conn);
