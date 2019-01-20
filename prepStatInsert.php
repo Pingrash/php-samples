@@ -17,7 +17,7 @@
     <div class="container-fluid">
       <p>The INSERT SQL statement on this page uses prepared statements. See the source file on how.</p>
       <form action="includes/signupPrep.inc.php" method="POST">
-        Enter a new user into the Database:</br>
+        <p class="form-p">Enter a new user into the Database:</p>
         <input type="text" name="first" placeholder="FirstName"></br>
         <input type="text" name="last" placeholder="LastName"></br>
         <input type="text" name="email" placeholder="Email"></br>

@@ -28,8 +28,8 @@
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <a class="dropdown-item" href="basicCalc.php">Basic Calculator</a>
               <a class="dropdown-item" href="basicDatabaseQuery">Basic Database Query</a>
-              <a class="prepStatQuery.php" href="#">Prepared Statement Query</a>
-              <a class="dropdown-item" href="#">Project 4</a>
+              <a class="dropdown-item" href="prepStatQuery.php">Prepared Statement Query</a>
+              <a class="dropdown-item" href="prepStatInsert.php">Prepared Statement Insert</a>
             </div>
           </li>
         </ul>
