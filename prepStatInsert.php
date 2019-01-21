@@ -27,7 +27,9 @@
       </form>
 
       <p style="padding-top: 1rem;">User IDs in database:</p>
+
       <?php
+        // Displays all uid's in the table. Only here as an easy way to tell that the signup worked.
         $sql = "SELECT * FROM users;";
         $result = mysqli_query($conn, $sql);
         $resultCheck = mysqli_num_rows($result);
