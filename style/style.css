@@ -6,3 +6,15 @@
   font-size: 16px;
   font-weight: 700;
 }
+
+.div-section{
+  padding: 1rem 0;
+}
+
+.error{
+  color: red;
+}
+
+.success{
+  color: green;
+}
