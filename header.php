@@ -30,6 +30,7 @@
               <a class="dropdown-item" href="basicDatabaseQuery">Basic Database Query</a>
               <a class="dropdown-item" href="prepStatQuery.php">Prepared Statement Query</a>
               <a class="dropdown-item" href="prepStatInsert.php">Prepared Statement Insert</a>
+              <a class="dropdown-item" href="login.php">Login Page</a>
             </div>
           </li>
         </ul>
