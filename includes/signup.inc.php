@@ -9,7 +9,7 @@
   // this version does not hash the password for security, will learn about that later.
   // mysqli_real_escape_string converts the input from the form into a string. This prevents SQL inject attacks as attackers can type SQL code into the input fields and if it gets to the database as code can cause sever damage. ALWAYS DO THIS!!!
 
-  $sql = "INSERT INTO users (user_first, user_last, user_email, user_uid, user_pwd) VALUES ('$first', '$last', '$email', '$uid', '$pwd');";
+  $sql = "INSERT INTO usertest (user_first, user_last, user_email, user_uid, user_pwd) VALUES ('$first', '$last', '$email', '$uid', '$pwd');";
 
   mysqli_query($conn, $sql);
 
