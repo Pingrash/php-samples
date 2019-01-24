@@ -17,7 +17,7 @@
     <div class="container-fluid">
       <div class="mx-auto" style="width: 50%;">
         <h1>Sign Up</h1>
-        <form>
+        <form action="includes/signup.inc.php" method="post">
           <div class="form-row">
             <div class="form-group col-md-12">
               <label for="emailInput">Email</label>

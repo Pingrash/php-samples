@@ -14,6 +14,14 @@
   <body>
     <div class="main-container">
       <div class="container-fluid">
+        <?php
+          if (isset($_SESSION['userId'])) {
+            echo '<p>You are logged in as '.$_SESSION['userUid'].'</p>';
+          }
+          else {
+            echo '<p>You are not logged in!</p>';
+          }
+        ?>
         
         <h2>Projects</h2>
         <dl>
