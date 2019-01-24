@@ -27,10 +27,9 @@
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">PHP Projects</a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <a class="dropdown-item" href="basicCalc.php">Basic Calculator</a>
-              <a class="dropdown-item" href="basicDatabaseQuery">Basic Database Query</a>
+              <a class="dropdown-item" href="basicDatabaseQuery.php">Basic Database Query</a>
               <a class="dropdown-item" href="prepStatQuery.php">Prepared Statement Query</a>
               <a class="dropdown-item" href="prepStatInsert.php">Prepared Statement Insert</a>
-              <a class="dropdown-item" href="login.php">Login Page</a>
             </div>
           </li>
           <div class="dropdown-divider"></div>

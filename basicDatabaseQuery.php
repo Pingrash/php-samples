@@ -17,7 +17,7 @@
     <div class="container-fluid">
       <p>User IDs within user table of the database:</br>
         <?php
-          $sql = "SELECT * FROM users;"; // sets a SELECT SQL code to the variable that can be called to grab all data from users. Semicolon after users is for the SQL statement.
+          $sql = "SELECT * FROM usertest;"; // sets a SELECT SQL code to the variable that can be called to grab all data from users. Semicolon after users is for the SQL statement.
           $result = mysqli_query($conn, $sql); // $conn (set in dbh.inc.php) connects to the database. $sql sends the SQL statement that grabs all data from users, then sets it to $result.
           $resultCheck = mysqli_num_rows($result); // optional but recommended. Returns the number of rows in the SQL query.
 
