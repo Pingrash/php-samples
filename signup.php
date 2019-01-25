@@ -17,6 +17,34 @@
     <div class="container-fluid">
       <div class="mx-auto" style="width: 50%;">
         <h1>Sign Up</h1>
+        <?php
+          if (isset($_GET['error'])) {
+            if (isset($_GET['error']) == "emptyfields") {
+              echo '<p class="error">Fill in all fields!</p>';
+            }
+            elseif (isset($_GET['error']) == "invalidemailuid") {
+              echo '<p class="error">Invalid email and username!</p>';
+            }
+            elseif (isset($_GET['error']) == "invalidemail") {
+              echo '<p class="error">Invalid email!</p>';
+            }
+            elseif (isset($_GET['error']) == "invaliduid") {
+              echo '<p class="error">Invalid username!</p>';
+            }
+            elseif (isset($_GET['error']) == "passwordcheck") {
+              echo '<p class="error">Your passwords did not match!</p>';
+            }
+            elseif (isset($_GET['error']) == "sqlerror") {
+              echo '<p class="error">SQL error!</p>';
+            }
+            elseif (isset($_GET['error']) == "usertaken") {
+              echo '<p class="error">Username is already taken!</p>';
+            }
+          }
+          elseif (isset($_GET['signup']) == "success") {
+            echo '<p class="success">Signup successful!</p>';
+          }
+        ?>
         <form action="includes/signup.inc.php" method="post">
           <div class="form-row">
             <div class="form-group col-md-12">
