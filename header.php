@@ -67,7 +67,7 @@
               </form>
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="signup.php">New around here? Sign up</a>
-              <a class="dropdown-item" href="#">Forgot password?</a>
+              <a class="dropdown-item" href="reset-password.php">Forgot password?</a>
             </div>';
           }
           // Set logout button if user is logged in

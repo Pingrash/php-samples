@@ -69,6 +69,7 @@
             </div>
           </div>
           <button type="submit" name="signup-submit" class="btn btn-primary">Sign Up</button>
+          <a href="reset-password.php">Forgot your password?</a>
         </form>
       </div>
     </div> <!-- container-fluid -->
