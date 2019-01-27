@@ -18,6 +18,7 @@
 
     $userEmail = $_POST['email'];
 
+    // SQL statement that deletes any existing tokens in the pwdreset table to ensure there is only one at all times
     $sql = "DELETE FROM pwdreset WHERE pwdResetEmail=?;";
     $stmt = mysqli_stmt_init($conn);
     if (!mysqli_stmt_prepare($stmt, $sql)) {
@@ -29,6 +30,7 @@
       mysqli_stmt_execute($stmt);
     }
 
+    // SQL statement to insert the new token into the pwdreset table
     $sql = "INSERT INTO pwdreset (pwdResetEmail, pwdResetSelector, pwdResetToken, pwdResetExpires) VALUES (?, ?, ?, ?);";
     $stmt = mysqli_stmt_init($conn);
     if (!mysqli_stmt_prepare($stmt, $sql)) {
@@ -36,11 +38,13 @@
       exit();
     }
     else {
+      // Token is hashed before it goes to the database for security
       $hashedToken = password_hash($token, PASSWORD_DEFAULT);
       mysqli_stmt_bind_param($stmt, "ssss", $userEmail, $selector, $hashedToken, $expires);
       mysqli_stmt_execute($stmt);
     }
 
+    // Sets up mailserver connection and email, then sends the email
     require ('../PHPMailer/src/Exception.php');
     require ('../PHPMailer/src/PHPMailer.php');
     require ('../PHPMailer/src/SMTP.php');
@@ -59,6 +63,7 @@
     $mail->Body = '<p>We recived a password reset request. The link to reset your password is below. If you did not make this request, you can ignore this email.</p><p>Here is your password reset link: </br><a href="'.$url.'">'.$url.'</a></p>';
     $mail->AddAddress($userEmail);
 
+    // Checks for successful email send
     if (!$mail->Send()) {
       echo "Mailer Error: " . $mail->ErrorInfo;
     }
@@ -66,7 +71,7 @@
       header("Location: ../reset-password.php?reset=success");
 
       mysqli_stmt_close($stmt);
-      mysqli_close();
+      mysqli_close($conn);
 
       exit();
     }

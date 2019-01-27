@@ -18,6 +18,8 @@
       <div class="mx-auto" style="width: 50%;">
         <h1>Sign Up</h1>
         <?php
+
+          // Various messages to be displayed based on success and error in the URL
           if (isset($_GET['error'])) {
             if (isset($_GET['error']) == "emptyfields") {
               echo '<p class="error">Fill in all fields!</p>';
@@ -43,6 +45,9 @@
           }
           elseif (isset($_GET['signup']) == "success") {
             echo '<p class="success">Signup successful!</p>';
+          }
+          elseif (isset($_GET['newpwd']) == "success") {
+            echo '<p class="success">Password update successful!</p>';
           }
         ?>
         <form action="includes/signup.inc.php" method="post">

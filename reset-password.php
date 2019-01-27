@@ -22,8 +22,8 @@
         <form action="includes/reset-request.inc.php" method="post">
           <div class="form-row align-items-center">
             <div class="col-auto">
-              <label class="sr-only" for="inlineFormInput">Email</label>
-              <input type="email" class="form-control mb-2" id="inlineFormInput" placeholder="Enter your email address..." name="email">
+              <label class="sr-only" for="emailInput">Email</label>
+              <input type="email" class="form-control mb-2" id="emailInput" placeholder="Enter your email address..." name="email">
             </div>
             <div class="col-auto">
               <button type="submit" class="btn btn-primary mb-2" name="reset-request-submit">Submit request</button>
@@ -31,7 +31,7 @@
           </div>
         </form>
         <?php
-          if ($_GET['reset'] == "success") {
+          if (isset($_GET['reset']) == "success") {
             echo '<p class="success">Check your email!</p>';
           }
         ?>
