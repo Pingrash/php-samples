@@ -56,8 +56,8 @@
     $mail->Host = 'smtp.gmail.com';
     $mail->Port = '465';
     $mail->isHTML();
-    $mail->Username = 'mdmailto@gmail.com';
-    $mail->Password = 'cup991?Pattern?';
+    $mail->Username = 'email';
+    $mail->Password = 'password';
     $mail->SetFrom('no-reply@mackenziedesigns.org');
     $mail->Subject = 'Reset your password for Mackenzie Designs account';
     $mail->Body = '<p>We received a password reset request. The link to reset your password is below. If you did not make this request, you can ignore this email.</p><p>Here is your password reset link: </br><a href="'.$url.'">'.$url.'</a></p>';
