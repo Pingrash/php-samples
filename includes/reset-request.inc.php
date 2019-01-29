@@ -63,15 +63,9 @@
     $mail->Host = $host;
     $mail->Port = $port;
     $mail->isHTML();
-<<<<<<< HEAD
     $mail->Username = $mailUsername;
     $mail->Password = $mailPassword;
     $mail->SetFrom($mailFrom);
-=======
-    $mail->Username = 'email';
-    $mail->Password = 'password';
-    $mail->SetFrom('no-reply@mackenziedesigns.org');
->>>>>>> 3d9b87e726986d050adee49919ffd28453646e02
     $mail->Subject = 'Reset your password for Mackenzie Designs account';
     $mail->Body = '<p>We received a password reset request. The link to reset your password is below. If you did not make this request, you can ignore this email.</p><p>Here is your password reset link: </br><a href="'.$url.'">'.$url.'</a></p>';
     $mail->AddAddress($userEmail);
