@@ -45,20 +45,27 @@
     }
 
     // Sets up mailserver connection and email, then sends the email
+    require ('mailer.inc.php');
     require ('../PHPMailer/src/Exception.php');
     require ('../PHPMailer/src/PHPMailer.php');
     require ('../PHPMailer/src/SMTP.php');
 
+    /*
+      mailer.inc.php will need to be created or variables set in this file for email to work. File left ignored for security purposes.
+      The file will need the following variables:
+      $smtpAuth, $smtpSecure, $host, $port, $mailUsername, $mailPassword, $mailFrom.
+    */
+
     $mail = new PHPMailer\PHPMailer\PHPMailer();
     $mail->isSMTP();
-    $mail->SMTPAuth = true;
-    $mail->SMTPSecure = 'ssl';
-    $mail->Host = 'smtp.gmail.com';
-    $mail->Port = '465';
+    $mail->$smtpAuth;
+    $mail->SMTPSecure = $smtpSecure;
+    $mail->Host = $host;
+    $mail->Port = $port;
     $mail->isHTML();
-    $mail->Username = 'mdmailto@gmail.com';
-    $mail->Password = 'cup991?Pattern?';
-    $mail->SetFrom('no-reply@mackenziedesigns.org');
+    $mail->Username = $mailUsername;
+    $mail->Password = $mailPassword;
+    $mail->SetFrom($mailFrom);
     $mail->Subject = 'Reset your password for Mackenzie Designs account';
     $mail->Body = '<p>We received a password reset request. The link to reset your password is below. If you did not make this request, you can ignore this email.</p><p>Here is your password reset link: </br><a href="'.$url.'">'.$url.'</a></p>';
     $mail->AddAddress($userEmail);
