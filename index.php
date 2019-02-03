@@ -27,6 +27,7 @@
         <dl>
           <dt><a href="basicCalc.php">Basic Calculator</a></dt>
           <dt><a href="basicDatabaseQuery.php">Basic Database Query</a></dt>
+          <dt><a href="profile.php">Profile Page</a></dt>
           <dt>Prepared Statements</dt>
           <dd>- <a href="prepStatQuery.php">Query</a></dd>
           <dd>- <a href="prepStatInsert.php">Insert</a></dd>
