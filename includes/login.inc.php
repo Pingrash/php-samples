@@ -8,6 +8,9 @@
     $mailuid = $_POST['mailuid'];
     $password = $_POST['pwd'];
 
+    // Page to redirect the user to on successful login
+    $redirect = $_POST['page'];
+
     // Checks for empty fields
     if (empty($mailuid) || empty($password)) {
       header("Location: ../index.php?error=emptyfields&email=".$mailuid);
@@ -54,8 +57,9 @@
             session_start();
             $_SESSION['userId'] = $row['idUsers'];
             $_SESSION['userUid'] = $row['uidUsers'];
-
-            header("Location: ../index.php?login=success");
+            
+            // On success the user is sent back to the page they logged in from
+            header("Location: ".$redirect."?login=success");
             exit();
           }
           else {
