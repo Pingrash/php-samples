@@ -34,6 +34,7 @@
               <a class="dropdown-item" href="basicDatabaseQuery.php">Basic Database Query</a>
               <a class="dropdown-item" href="prepStatQuery.php">Prepared Statement Query</a>
               <a class="dropdown-item" href="prepStatInsert.php">Prepared Statement Insert</a>
+              <a class="dropdown-item" href="profile.php">Profile Page</a>
             </div>
           </li>
           <div class="dropdown-divider"></div>
@@ -62,8 +63,9 @@
                       Remember me
                     </label>
                   </div>
-                </div>
-                <button type="submit" class="btn btn-primary" name="login-submit">Sign in</button>
+                </div>';
+            echo '<input type="hidden" name="page" value='.$_SERVER['REQUEST_URI'].'>';
+            echo '<button type="submit" class="btn btn-primary" name="login-submit">Sign in</button>
               </form>
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="signup.php">New around here? Sign up</a>
