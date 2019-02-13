@@ -89,12 +89,40 @@
 
             // Sends the now complete SQL statement to database
             mysqli_stmt_execute($stmt);
-            header("Location: ../signup.php?signup=success");
-            exit();
+
+            // SQL Statement to select the id that was set for the new user in users for use in another insert statement for the profileimg table
+            $sql = "SELECT * FROM users WHERE uidUsers = '$username' AND emailUsers = '$email';";
+            $resultQuery = mysqli_query($conn, $sql);
+
+            if (mysqli_num_rows($resultQuery) < 0) {
+              header("Location: ../signup.php?error=sqlerror");
+              exit();
+            }
+            else {
+              while ($row = mysqli_fetch_assoc($resultQuery)) {
+                $userId = $row['idUsers'];
+                // SQL statement to insert the user into the profileimg table
+                // status is set to 1 as the user cannot set their profile picture on signup
+                $sql = "INSERT INTO profileimg (userid, status) VALUES (?, 1);";
+
+                $stmt = mysqli_stmt_init($conn);
+
+                if (!mysqli_stmt_prepare($stmt, $sql)) {
+                  header("Location: ../signup.php?error=sqlerror");
+                  exit();
+                }
+                else {
+                  mysqli_stmt_bind_param($stmt, "i", $userId);
+                  mysqli_stmt_execute($stmt);
+
+                  header("Location: ../signup.php?signup=success");
+                  exit();
+                }
+              }
+            }
           }
         }
       }
-
     }
 
     mysqli_stmt_close($stmt);

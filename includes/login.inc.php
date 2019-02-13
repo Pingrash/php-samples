@@ -13,7 +13,7 @@
 
     // Checks for empty fields
     if (empty($mailuid) || empty($password)) {
-      header("Location: ../index.php?error=emptyfields&email=".$mailuid);
+      header("Location: ../login.php?error=emptyfields&email=".$mailuid);
       exit();
     }
     else {
@@ -26,7 +26,7 @@
 
       // Check for SQL statement validity
       if (!mysqli_stmt_prepare($stmt, $sql)) {
-        header("Location: ../index.php?error=sqlerror");
+        header("Location: ../login.php?error=sqlerror");
         exit();
       }
       else {
@@ -48,7 +48,7 @@
           
           // Error handler if entered password does not match the database
           if ($pwdCheck == false) {
-            header("Location: ../index.php?error=wrongpwd");
+            header("Location: ../login.php?error=wrongpwd");
             exit();
           }
           elseif ($pwdCheck == true) {
@@ -58,26 +58,24 @@
             $_SESSION['userId'] = $row['idUsers'];
             $_SESSION['userUid'] = $row['uidUsers'];
             
-            // On success the user is sent back to the page they logged in from
+            // On success the user is sent back to the page they logged in from if not the login page
             header("Location: ".$redirect."?login=success");
             exit();
           }
           else {
-            header("Location: ../index.php?error=wrongpwd");
+            header("Location: ../login.php?error=wrongpwd");
             exit();
           }
         }
         else {
-          header("Location: ../index.php?error=nouser");
+          header("Location: ../login.php?error=nouser");
           exit();
         }
       }
     }
-
   }
   else {
     header("Location: ../index.php");
     exit();
   }
-
 ?>

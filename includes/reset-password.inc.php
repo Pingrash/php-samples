@@ -96,7 +96,6 @@ if (isset($_POST['reset-password-submit'])) {
       }
     }
   }
-
 } else {
   header("Location: ../index.php");
 }

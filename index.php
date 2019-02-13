@@ -1,6 +1,6 @@
 <?php
   include_once 'links.php';
-  include_once 'header.php'; // inlcude_once will ensure the file will only be included once if it is included in one of the linked files as well.
+  include_once 'header.php'; // include_once will ensure the file will only be included once if it is included in one of the linked files as well.
 ?>
 
 <!DOCTYPE html>
@@ -14,6 +14,7 @@
   <body>
     <div class="main-container">
       <div class="container-fluid">
+        
         <?php
           if (isset($_SESSION['userId'])) {
             echo '<p>You are logged in as '.$_SESSION['userUid'].'</p>';
@@ -28,6 +29,8 @@
           <dt><a href="basicCalc.php">Basic Calculator</a></dt>
           <dt><a href="basicDatabaseQuery.php">Basic Database Query</a></dt>
           <dt><a href="profile.php">Profile Page</a></dt>
+          <dt><a href="login.php">Login Page</a></dt>
+          <dt><a href="contact.php">Contact Page</a></dt>
           <dt>Prepared Statements</dt>
           <dd>- <a href="prepStatQuery.php">Query</a></dd>
           <dd>- <a href="prepStatInsert.php">Insert</a></dd>

@@ -1,5 +1,9 @@
 <?php
 
+session_start();
+include_once 'dbh.inc.php';
+$id = $_SESSION['userId'];
+
 if (isset($_POST['submit'])) {
   
   // Sets the info data for the file into an array
@@ -34,13 +38,16 @@ if (isset($_POST['submit'])) {
         exit();
       } else {
         // Creates a unique ID for the file seeded on the current time and concat the file extension to create a new file name
-        $fileNameNew = uniqid('', true). "." .$fileActualExt;
+        $fileNameNew = "profile".$id.".".$fileActualExt;
 
         // The destination that the file will be sent to
         $fileDestination = '../uploads/'.$fileNameNew;
 
         // Move the file to the new location
         move_uploaded_file($fileTmpName, $fileDestination);
+
+        $sql = "UPDATE profileimg SET status=0, ext='$fileActualExt' WHERE userid='$id';";
+        $result = mysqli_query($conn, $sql);
 
         header("Location: ../profile.php?success");
         exit();
