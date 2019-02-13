@@ -31,6 +31,7 @@
           <dt><a href="profile.php">Profile Page</a></dt>
           <dt><a href="login.php">Login Page</a></dt>
           <dt><a href="contact.php">Contact Page</a></dt>
+          <dt><a href="deletefiles.php">Delete Files</a></dt>
           <dt>Prepared Statements</dt>
           <dd>- <a href="prepStatQuery.php">Query</a></dd>
           <dd>- <a href="prepStatInsert.php">Insert</a></dd>
