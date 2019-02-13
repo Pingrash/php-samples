@@ -35,6 +35,7 @@
               <a class="dropdown-item" href="prepStatQuery.php">Prepared Statement Query</a>
               <a class="dropdown-item" href="prepStatInsert.php">Prepared Statement Insert</a>
               <a class="dropdown-item" href="profile.php">Profile Page</a>
+              <a class="dropdown-item" href="deletefiles.php">Delete Files</a>
             </div>
           </li>
           <div class="dropdown-divider"></div>
