@@ -1,5 +1,6 @@
 <?php
   session_start();
+  include_once 'includes/dbh.inc.php';
 ?>
 
 <!DOCTYPE html>
@@ -15,6 +16,28 @@
   <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
       <a class="navbar-brand" href="index.php">MACKENZIE DESIGNS</a>
+
+      <?php
+      // Fetch profile image
+      if (isset($_SESSION['userId'])) {
+        $id = $_SESSION['userId'];
+        $sql = "SELECT * FROM profileimg WHERE userid='$id';";
+        $resultImg = mysqli_query($conn, $sql);
+        while ($rowImg = mysqli_fetch_assoc($resultImg)) {
+          echo '<li class="nav-profile-li"><a href="profile.php">';
+          if ($rowImg['status'] == 0) {
+            echo '<img src="uploads/profile'.$id.'.'.$rowImg['ext'].'?'.mt_rand().'" class="nav-profile-img">';
+            // mt_rand is used to add a random number to the end of the file forcing the browser to update as if it was just the same name as before the old image may be cached
+          } else {
+            // Set default profile image if user has not set one
+            echo '<img src="uploads/defaultprofile.jpg" class="nav-profile-img">';
+          }
+          // Close off the tags
+          echo '</a></li>';
+        }
+      }
+      ?>
+
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>

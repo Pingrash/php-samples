@@ -58,7 +58,7 @@
             echo '</form></br>';
 
             echo '<form action="includes/deleteprofileimg.inc.php" method="POST" enctype="multipart/form-data">
-            <button type="submit" name="submit">Delete Profile Image</button>';
+            <button type="submit" name="submit">Delete Profile Avatar</button>';
             
             if (isset($_GET['delete'])) {
               switch($_GET['delete']){

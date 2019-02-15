@@ -87,6 +87,20 @@
   padding: 0.5rem;
 }
 
+.nav-profile-img{
+  /* Sets the img as round */
+  width: 40px;
+  border-radius: 50%;
+}
+
+.nav-profile-li{
+  /* Removes list decoration and positions the img to the right side of nav next to the menu button */
+  list-style: none;
+  position: absolute;
+  right: 90px;
+  top: 8px;
+}
+
 @media only screen and (min-width: 1000px){
   .contact-form{
     padding: 0 15rem;
