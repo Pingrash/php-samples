@@ -32,6 +32,9 @@
           <dt><a href="login.php">Login Page</a></dt>
           <dt><a href="contact.php">Contact Page</a></dt>
           <dt><a href="deletefiles.php">Delete Files</a></dt>
+          <dt><a href="articles.php">Articles</a></dt>
+          <dt><a href="regexp.php">Regular Expressions</a></dt>
+          <dt><a href="uniquestrings.php">Unique Strings</a></dt>
           <dt>Prepared Statements</dt>
           <dd>- <a href="prepStatQuery.php">Query</a></dd>
           <dd>- <a href="prepStatInsert.php">Insert</a></dd>

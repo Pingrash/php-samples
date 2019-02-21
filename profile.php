@@ -4,6 +4,10 @@
   include_once 'includes/dbh.inc.php';
 ?>
 
+<head>
+  <title>Profile</title>
+</head>
+
 <body>
   <div class="main-container">
     <div class="container-fluid">

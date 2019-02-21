@@ -101,6 +101,41 @@
   top: 8px;
 }
 
+.article-container{
+  padding: 1rem;
+}
+
+.article-container a{
+  color: black;
+  text-decoration: none;
+}
+
+.article-box{
+  border: 1px solid lightgray;
+  padding: 1rem;
+}
+
+.search-form input{
+  padding: 0px 5px;
+  width: 300px;
+  height: 35px;
+  font-size: 20px;
+  vertical-align: top; 
+  margin-top: 0.5rem;
+}
+
+.search-form button{
+  width: 100px;
+  height: 35px;
+  font-size: 20px;
+  vertical-align: top;
+  margin-top: 0.5rem;
+}
+
+.replace-button{
+  width: 150px;
+}
+
 @media only screen and (min-width: 1000px){
   .contact-form{
     padding: 0 15rem;

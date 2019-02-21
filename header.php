@@ -9,7 +9,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title></title>
 </head>
 <body>
 
@@ -59,6 +58,10 @@
               <a class="dropdown-item" href="prepStatInsert.php">Prepared Statement Insert</a>
               <a class="dropdown-item" href="profile.php">Profile Page</a>
               <a class="dropdown-item" href="deletefiles.php">Delete Files</a>
+              <a class="dropdown-item" href="articles.php">Articles</a>
+              <a class="dropdown-item" href="regexp.php">Regular Expressions</a>
+              <a class="dropdown-item" href="uniquestrings.php">Unique Strings</a>
+              <a class="dropdown-item" href="classes.php">Classes (OOP)</a>
             </div>
           </li>
           <div class="dropdown-divider"></div>

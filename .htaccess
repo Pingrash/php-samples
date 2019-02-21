@@ -1,0 +1,7 @@
+RewriteEngine on
+
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteCond %{REQUEST_FILENAME}\.php -f
+
+RewriteRule ^articles/([0-9a-zA-Z_-]+)/([0-9]+) articles.php?title=$1&date=$2 [NC,L]
