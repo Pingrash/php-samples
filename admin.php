@@ -1,5 +1,6 @@
 <?php
   include_once 'links.php';
+  include 'includes/admin.inc.php'; // Admin only
   include_once 'header.php'; // inlcude_once will ensure the file will only be included once if it is included in one of the linked files as well.
 ?>
 
@@ -11,11 +12,10 @@
   <div class="main-container">
     <div class="container-fluid">
 
-      <?php
-        if (isset($_SESSION['userId']) == 6) {
-          echo 'Hi Admin!';
-        }
-      ?>
+      <ul class="admin-tools">
+        <h3>Admin Tools</h3>
+        <li><a href="viewusers.php">View Users</a></li>
+      </ul>
 
     </div> <!-- end container-fluid -->
   </div> <!-- end main-container -->

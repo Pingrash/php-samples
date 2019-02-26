@@ -1,5 +1,4 @@
 <?php
-  session_start();
   include_once 'includes/dbh.inc.php';
 ?>
 
@@ -62,6 +61,7 @@
               <a class="dropdown-item" href="regexp.php">Regular Expressions</a>
               <a class="dropdown-item" href="uniquestrings.php">Unique Strings</a>
               <a class="dropdown-item" href="classes.php">Classes (OOP)</a>
+              <a class="dropdown-item" href="oopCalc.php">OOP Calculator</a>
             </div>
           </li>
           <div class="dropdown-divider"></div>

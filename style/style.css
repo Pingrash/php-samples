@@ -136,6 +136,16 @@
   width: 150px;
 }
 
+.classes-user{
+  padding: 1rem;
+  margin: 0.5rem;
+  background-color: lightgray;
+}
+
+.admin-tools li{
+  list-style: none;
+}
+
 @media only screen and (min-width: 1000px){
   .contact-form{
     padding: 0 15rem;
