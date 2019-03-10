@@ -43,3 +43,4 @@ Thumbs.db
 *~
 phpmailertest.php
 mailer.inc.php
+pdoconnect.php
