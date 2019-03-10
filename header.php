@@ -16,7 +16,7 @@
       <a class="navbar-brand" href="index.php">MACKENZIE DESIGNS</a>
 
       <?php
-      // Fetch profile image
+      // Fetch profile image from database
       if (isset($_SESSION['userId'])) {
         $id = $_SESSION['userId'];
         $sql = "SELECT * FROM profileimg WHERE userid='$id';";
@@ -56,6 +56,8 @@
               <a class="dropdown-item" href="prepStatQuery.php">Prepared Statement Query</a>
               <a class="dropdown-item" href="prepStatInsert.php">Prepared Statement Insert</a>
               <a class="dropdown-item" href="profile.php">Profile Page</a>
+              <a class="dropdown-item" href="login.php">Login Page</a>
+              <a class="dropdown-item" href="contact.php">Contact Page</a>
               <a class="dropdown-item" href="deletefiles.php">Delete Files</a>
               <a class="dropdown-item" href="articles.php">Articles</a>
               <a class="dropdown-item" href="regexp.php">Regular Expressions</a>
@@ -73,7 +75,7 @@
             <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" data-display="static" aria-haspopup="true" aria-expanded="false">
               Login
             </button>
-            <div class="dropdown-menu dropdown-menu-lg-right">
+            <div class="dropdown-menu dropdown-menu-lg-right nav-login-form">
               <form class="px-4 py-3" action="includes/login.inc.php" method="post">
                 <div class="form-group">
                   <label for="exampleDropdownFormEmail1">Email address</label>

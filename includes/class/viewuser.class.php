@@ -4,7 +4,7 @@ class ViewUser extends User{
 
   // Function to echo all users in the loginsystem database
   public function showAllUsers(){
-    $datas = $this->getAllUser();
+    $datas = $this->getAllUsers();
     foreach ($datas as $data) {
       echo '<div class="classes-user">';
       echo 'ID: '.$data['idUsers'].'<br>';

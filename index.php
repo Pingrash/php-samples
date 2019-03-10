@@ -31,20 +31,24 @@
         <dt><a href="articles.php">Articles</a></dt>
         <dt><a href="regexp.php">Regular Expressions</a></dt>
         <dt><a href="uniquestrings.php">Unique Strings</a></dt>
+        <dt><a href="advancedcalc.php">Advanced Calculator</a></dt>
         <dt>Prepared Statements</dt>
         <dd>- <a href="prepStatQuery.php">Query</a></dd>
         <dd>- <a href="prepStatInsert.php">Insert</a></dd>
         <dt>Object Orientated PHP (OOP)</dt>
-        <dt><a href="classes.php">Classes</a></dt>
-        <dt><a href="oopCalc.php">OOP Calculator</a></dt>
+        <dd>- <a href="classes.php">Classes</a></dd>
+        <dd>- <a href="oopCalc.php">OOP Calculator</a></dd>
       </dl>
-      
-      <div>
-        <?php
-          echo "Today is ".date("l")."</br>"; // date(l) will return the current day as a string
-          echo "<p>hi there</p>";
-        ?>
-      </div>
+    
+      <?php
+        // Welcome 
+        if (isset($_SESSION['userUid'])) {
+          echo '<div class="index-welcome">';
+          echo "<p>Today is ".date("l")."</p>"; // date(l) will return the current day as a string
+          echo '<p>Hi there '.$_SESSION['userUid'].'!</p>';
+          echo '</div>';
+        }
+      ?>
       
     </div> <!-- end container-fluid -->
   </div> <!-- end main-container -->  
