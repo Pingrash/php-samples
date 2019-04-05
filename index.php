@@ -32,6 +32,7 @@
         <dt><a href="regexp.php">Regular Expressions</a></dt>
         <dt><a href="uniquestrings.php">Unique Strings</a></dt>
         <dt><a href="advancedcalc.php">Advanced Calculator</a></dt>
+        <dt><a href="weather.php">Weather App</a></dt>
         <dt>Prepared Statements</dt>
         <dd>- <a href="prepStatQuery.php">Query</a></dd>
         <dd>- <a href="prepStatInsert.php">Insert</a></dd>

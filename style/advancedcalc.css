@@ -134,7 +134,7 @@ h1{
 
   .calc-bottombar{
     visibility: visible;
-    padding-top: 1rem;
+    padding: 0 1rem;
   }
   
   .calc-bottombar-row{

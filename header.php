@@ -64,6 +64,8 @@
               <a class="dropdown-item" href="uniquestrings.php">Unique Strings</a>
               <a class="dropdown-item" href="classes.php">Classes (OOP)</a>
               <a class="dropdown-item" href="oopCalc.php">OOP Calculator</a>
+              <a class="dropdown-item" href="advancedcalc.php">Advanced Calculator</a>
+              <a class="dropdown-item" href="weather.php">Weather App</a>
             </div>
           </li>
           <div class="dropdown-divider"></div>

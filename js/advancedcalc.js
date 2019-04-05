@@ -1,3 +1,19 @@
+/*
+Advanced Calculator Project
+
+The base of this project is based on the tutorial by youtuber PortExe (https://youtu.be/6v4vBXL-qkY).
+
+To-Do:
+- Figure out wierd resizing of display element after clearing it
+
+Features added by me:
+- Responsive CSS for mobile screens
+- Added sidebar with additional functions
+- Added keypress events to allow for keyboard input (primary keys only)
+- Added display element for the equation
+- Automatic resizing of number text in display element based on number of numbers displayed to try and prevent overflow
+*/
+
 var oneBtn = document.querySelector('#calc-one');
 var twoBtn = document.querySelector('#calc-two');
 var threeBtn = document.querySelector('#calc-three');
@@ -14,6 +30,11 @@ var clearBtn = document.querySelector('#calc-clear');
 var backspaceBtn = document.querySelector('#calc-backspace');
 var displayValElement = document.querySelector('#calc-display-val');
 var equationDisplay = document.querySelector('.equation-display');
+var evaluateBtn = document.querySelector('#calc-equals');
+var plusBtn = document.querySelector('#calc-plus');
+var minusBtn = document.querySelector('#calc-minus');
+var multiplyBtn = document.querySelector('#calc-multiply');
+var divideBtn = document.querySelector('#calc-divide');
 
 var calcNumBtns = document.querySelectorAll('.calc-btn-num');
 var calcOperatorBtns = document.querySelectorAll('.calc-btn-operator');
@@ -23,6 +44,68 @@ var pendingVal;
 var evalStringArray = [];
 var fontSizeChanged = false;
 var newEquation = false;
+
+// Add keypress events so the user can type the numbers instead of clicking each button (only for primary buttons)
+document.addEventListener("keyup", (event) => {
+  switch (event.key){
+    case "1":
+      oneBtn.click();
+      break;
+    case "2":
+      twoBtn.click();
+      break;
+    case "3":
+     threeBtn.click();
+     break;
+    case "4":
+      fourBtn.click();
+      break;
+    case "5":
+      fiveBtn.click();
+      break;
+    case "6":
+      sixBtn.click();
+      break;
+    case "7":
+      sevenBtn.click();
+      break;
+    case "8":
+      eightBtn.click();
+      break;
+    case "9":
+      nineBtn.click();
+      break;
+    case "0":
+      zeroBtn.click();
+      break;
+    case "Enter":
+      evaluateBtn.click();
+      break;
+    case ".":
+      decimalBtn.click();
+      break;
+    case "Backspace":
+      backspaceBtn.click();
+      break;
+    case "Delete":
+      clearBtn.click();
+      break;
+    case "-":
+      minusBtn.click();
+      break;
+    case "+":
+      plusBtn.click();
+      break;
+    case "/":
+      divideBtn.click();
+      break;
+    case "*":
+      multiplyBtn.click();
+      break;
+    default:
+      break;
+  }
+});
 
 // Overflow function that decreases the font size in the value element if overflow is detected
 var isOverflowed = () => {
